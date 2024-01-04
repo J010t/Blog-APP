@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(cookieParser());
 const __dirname = path.resolve();
 
-app.use(cors({credentials: true}));
+app.use(cors({origin: 'https://blog-app-8evq.onrender.com',credentials: true}));
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", PostRoute);
