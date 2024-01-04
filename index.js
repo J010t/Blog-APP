@@ -32,8 +32,8 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 const __dirname = path.resolve();
-app.use
-app.use(cors({origin: "http://localhost:5173",credentials: true}));
+
+app.use(cors({credentials: true}));
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", PostRoute);
